@@ -1,0 +1,190 @@
+/* ===== BODY ===== */
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: url('../images/background.jpg') center center/cover no-repeat, linear-gradient(120deg, #F6F6F6 0%, #EDEDED 100%);
+    background-attachment: fixed;
+    color: #22223B;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Overlay putih transparan di atas background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: rgba(255,255,255,0.65); /* atur opacity sesuai kebutuhan */
+    pointer-events: none;
+}
+
+/* Pastikan konten di atas overlay */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: transparent;
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(45,50,80,0.10);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #393E46;
+    text-shadow: 0 2px 12px rgba(146,154,171,0.12);
+}
+
+.header p {
+    font-size: 1.3rem;
+    color: #F7F7F7;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.header-bg {
+    min-height: 180px;
+    height: 180px;
+    width: 100%;
+    background: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* ===== LOGO ===== */
+.logo-img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.nav .nav-link {
+    color: #311a1a !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.nav .nav-link:hover,
+.nav .nav-link.active {
+    background: #F9B17A;
+    color: #2D3250 !important;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    padding: 0;
+    margin: 0;
+}
+.hero-section .position-relative {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+.hero-section img {
+    display: none;
+}
+.hero-section .position-absolute {
+    display: none;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* ===== CARD & POSTS ===== */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(66,71,105,0.10);
+    background: #fff;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(66,71,105,0.18);
+}
+.card-title {
+    color: #2D3250;
+    font-weight: 600;
+}
+.card-text {
+    color: #424769;
+}
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #2D3250 !important;
+    color: #F9B17A !important;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-top: 48px;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 -2px 16px rgba(45,50,80,0.04);
+}
+/* Footer always at the bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* ===== Tambahan ===== */
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+    .hero-section .position-relative,
+    .hero-section img {
+        height: 200px;
+    }
+    .card-img-top {
+        height: 120px;
+    }
+}
+
