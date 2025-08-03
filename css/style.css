@@ -98,8 +98,13 @@ body > * {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-    padding: 0;
-    margin: 0;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .hero-section .position-relative {
     width: 100%;
@@ -111,6 +116,15 @@ body > * {
 }
 .hero-section .position-absolute {
     display: none;
+}
+.hero-section .container-fluid,
+.hero-section .position-relative {
+    height: auto !important;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ===== SECTION ===== */
